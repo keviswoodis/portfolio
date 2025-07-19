@@ -1,16 +1,29 @@
-html, header, footer, body, h1, h2, h3, img, a, div {
+html,
+header,
+footer,
+body,
+h1,
+h2,
+h3,
+img,
+a,
+div {
     border: 0;
     margin: 0;
     padding: 0;
 }
 
+/*mobile layout*/
+
 body {
     font-family: Roboto Flex;
     background-color: #212121;
     color: white;
-    padding:16px;
-    
+    padding: 16px;
+
 }
+
+/*landing page styling */
 
 #landing-header {
     color: white;
@@ -39,7 +52,7 @@ body {
 #landing-links {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 
 }
@@ -50,10 +63,115 @@ body {
     font-size: 200%;
     font-family: Cal Sans;
     margin-bottom: 10px;
-    text-decoration:none;
-    text-align:center;
-    align-content:center;
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
     color: white;
     border: 3px solid white;
-    border-radius:5px;
+    border-radius: 5px;
+}
+
+/*desktop styling*/
+@media screen and (min-width: 1080px) {
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: auto 10%;
+        padding: 10px 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*desktop styling for landing page */
+
+    #landing-invite {
+        display: none;
+    }
+
+    #landing-header {
+        flex-basis: 10%;
+    }
+
+    #landing-header h1 {
+        font-size: 500%;
+        animation: appear 3s ease-out forwards;
+
+    }
+
+    main {
+        align-content: center;
+        flex-basis: 75%;
+    }
+
+    footer {
+        flex-basis: 10%;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    #contact-info {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    #landing-links {
+
+        display: flex;
+        flex-direction: row;
+        animation: rightGrow 1s ease-out forwards;
+
+
+    }
+
+    
+
+    #landing-links a {
+        display: inline-block;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-size: 150%;
+        border: 6px solid white;
+        border-radius: 0;
+        height: 100px;
+        margin: 10px;
+        animation: appear 2s ease-in-out forwards;
+        transition: border-radius 750ms, border-color 750ms; 
+    }
+
+    #landing-links a:hover {
+        border-color: blue;
+        border-radius: 10px;
+    }
+}
+
+@keyframes rightGrow {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        display: none;
+    }
+
+    to {
+        opacity: 1;
+        display: flex;
+    }
 }
