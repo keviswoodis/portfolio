@@ -75,6 +75,7 @@ body {
 @media screen and (min-width: 1080px) {
     html {
         height: 100%;
+        background: linear-gradient(#121212, rgb(43, 42, 42));
     }
 
     body {
@@ -92,7 +93,15 @@ body {
     }
 
     #landing-header {
-        flex-basis: 10%;
+        flex-basis: 20%;
+        display: flex;
+        background-color: whitesmoke;
+        align-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #121212;
+        
+    
     }
 
     #landing-header h1 {
@@ -101,6 +110,17 @@ body {
 
     }
 
+    #landing-header img {
+        border-radius: 50%;
+        height: 500px;
+        width: 500px;
+        position: relative;
+        top: 100px;
+    }
+
+    #landing-header div {
+        margin-left: 20px;
+    }
 
     main {
         align-content: center;
@@ -108,6 +128,8 @@ body {
     }
 
     footer {
+        display: flex;
+        justify-content: space-between;
         flex-basis: 10%;
     }
 
@@ -117,6 +139,7 @@ body {
 
     #contact-info {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-content: center;
     }
